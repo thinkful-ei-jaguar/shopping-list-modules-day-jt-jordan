@@ -5,7 +5,7 @@ let items = [];
 let hideCheckedItems = false;
 
 const findById = function(id){
-  store.items.find(item => item.id === id);
+  this.items.find(item => item.id === id);
 }
 
 const addItem = function(name){
@@ -20,9 +20,12 @@ const addItem = function(name){
 }
 
 const findAndToggleChecked = function(id){
-  let itemFound = this.findById(id);
-  itemFound.checked = !itemFound.checked;
-  }
+  console.log(id)
+    let itemFound = this.findById(id);
+    console.log(itemFound);
+  //itemFound.checked = !itemFound.checked;
+  
+}
 
 
 const findAndUpdateName = function(id, newName){
