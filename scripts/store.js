@@ -1,11 +1,11 @@
-'use strict';
 import item from './item.js';
 
 let items = [];
 let hideCheckedItems = false;
 
 const findById = function(id){
-  this.items.find(item => item.id === id);
+  return this.items.find(item => item.id === id);
+  
 }
 
 const addItem = function(name){
@@ -23,7 +23,7 @@ const findAndToggleChecked = function(id){
   console.log(id)
     let itemFound = this.findById(id);
     console.log(itemFound);
-  //itemFound.checked = !itemFound.checked;
+  itemFound.checked = !itemFound.checked;
   
 }
 
@@ -31,7 +31,7 @@ const findAndToggleChecked = function(id){
 const findAndUpdateName = function(id, newName){
   try {
     item.validateName(newName);
-    let itemFound = store.items.find(item => item.id === id);
+    let itemFound = this.items.find(item => item.id === id);
     itemFound.name = newName;
   } catch {
     console.log(`Cannot update name: ${error.message}`);

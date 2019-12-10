@@ -1,4 +1,3 @@
-'use strict';
 import store from './store.js';
 import item from './item.js';
 
@@ -101,7 +100,7 @@ const handleDeleteItemClicked = function () {
     // get the index of the item in store.items
     const id = getItemIdFromElement(event.currentTarget);
     // delete the item
-    store.findAndDelete();
+    store.findAndDelete(id);
     // render the updated shopping list
     render();
   });

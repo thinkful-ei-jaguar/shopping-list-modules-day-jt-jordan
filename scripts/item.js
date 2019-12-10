@@ -1,5 +1,3 @@
-'use strict';
-
 const validateName = function(name){
   if (name == false){
     throw new TypeError('Name must not be blank');
