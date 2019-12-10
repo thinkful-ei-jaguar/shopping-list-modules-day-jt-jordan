@@ -38,6 +38,10 @@ const findAndUpdateName = function(id, newName){
   }
 }
 
+const toggleCheckedFilter = function(){
+  this.hideCheckedItems = !this.hideCheckedItems;
+}
+
 const findAndDelete = function(id){
   let itemFound = this.items.find(item => item.id === id);
   console.log(itemFound); //return the entire object and properties
@@ -54,4 +58,5 @@ export default {
   findAndToggleChecked,
   findAndUpdateName,
   findAndDelete,
+  toggleCheckedFilter
 };
